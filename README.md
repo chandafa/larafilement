@@ -1,30 +1,24 @@
 ## 🚀 Quick Start
 
-1. Create new project using composer
-
-    ```php
-    composer create-project siubie/kaido-kit
-    ```
-
-2. Composer install
+1. Composer install
 
     ```php
     composer install
     ```
 
-3. Npm Install
+2. Npm Install
 
     ```php
     npm install
     ```
 
-4. Copy .env
+3. Copy .env
 
     ```php
     cp .env.example .env
     ```
 
-5. Configure your database in .env
+4. Configure your database in .env
 
     ```php
     DB_CONNECTION=mysql
@@ -35,7 +29,7 @@
     DB_PASSWORD=
     ```
 
-6. Configure your google sign in cliend id and secret (optional)
+5. Configure your google sign in cliend id and secret (optional)
 
     ```php
     #google auth
@@ -44,7 +38,7 @@
     GOOGLE_REDIRECT_URI=http://localhost:8000/admin/oauth/callback/google
     ```
 
-7. Configure your resend for email sending (optional)
+6. Configure your resend for email sending (optional)
 
     ```php
     #resend
@@ -59,40 +53,40 @@
     MAIL_FROM_NAME="${APP_NAME}"
     ```
 
-8. Migrate your database
+7. Migrate your database
 
     ```php
     php artisan migrate:fresh --seed
     ```
 
-9. Artisan Serve
+8. Artisan Serve
 
     ```php
     php artisan serve
     ```
 
-10. Npm run dev
+9. Npm run dev
 
     ```php
     npm run dev
     ```
 
-11. If run successfully you will get this login interface
+10. If run successfully you will get this login interface
 
     ![image.png](.github/images/login-screen.png)
 
-12. When signed in it will show this (not much yet but it getting there :) )
+11. When signed in it will show this (not much yet but it getting there :) )
 
     ![image.png](.github/images/after-login-without-rbac.png)
 
-13. Next step is to setup the RBAC, first generate the role and permission
+12. Next step is to setup the RBAC, first generate the role and permission
 
     ```php
     php artisan shield:generate --all
     ```
 
-14. It will ask which panel do you want to generate permission/policies for choose the admin panel.
-15. Setup the super admin using this command
+13. It will ask which panel do you want to generate permission/policies for choose the admin panel.
+14. Setup the super admin using this command
 
     ```php
     php artisan shield:super-admin
@@ -100,7 +94,7 @@
 
     ![image.png](.github/images/provide-superadmin.png)
 
-16. Choose your super admin user and login again.
+15. Choose your super admin user and login again.
 
     ![image.png](.github/images/after-login-rbac.png)
 
@@ -119,11 +113,12 @@ APP_URL=https://localhost:8000
 
 ## main.yml
 
-git pull
-composer install
-php artisan migrate:fresh --seed
-php artisan shield:generate --all
-php artisan db:seed --class=ShieldSeeder
-php artisan shield:super-admin --user=11
-php artisan filament:optimize
-##///##
+```
+    git pull
+    composer install
+    php artisan migrate:fresh --seed
+    php artisan shield:generate --all
+    php artisan db:seed --class=ShieldSeeder
+    php artisan shield:super-admin --user=11
+    php artisan filament:optimize
+```
